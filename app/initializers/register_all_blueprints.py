@@ -1,4 +1,4 @@
-from app.api.search_api import search_blueprint
+from api.search_api import search_blueprint
 
 
 class RegisterBlueprints:

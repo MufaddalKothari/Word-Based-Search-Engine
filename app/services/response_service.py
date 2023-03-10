@@ -1,4 +1,4 @@
-from app.constants.global_constants import GC
+from constants.global_constants import GC
 from flask import jsonify, make_response
 import json
 

@@ -3,11 +3,11 @@ from os import listdir
 from os.path import isfile, join
 import os
 from langcodes import closest_match
-from app.constants.global_constants import GC
+from constants.global_constants import GC
 import json
 import spacy
 
-from app.services.response_service import ResponseService
+from services.response_service import ResponseService
 spacy.prefer_gpu()
 
 
@@ -44,7 +44,7 @@ class AppService:
     def indexFiles(self):
 
         indexDictionary = {}
-        # lemmatizer = spacy.load("en_core_web_sm", disable=['parser', 'ner'])
+        #lemmatizer = spacy.load("en_core_web_sm", disable=['parser', 'ner'])
 
         files_list = self.getFilesInDirectory(
             os.path.join(os.getcwd(), GC.DATASET_FOLDER))

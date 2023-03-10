@@ -1,8 +1,23 @@
-from app.constants.global_constants import GC
+import sys
+import os
+ 
+# getting the name of the directory
+# where the this file is present.
+current = os.path.dirname(os.path.realpath(__file__))
+ 
+# Getting the parent directory name
+# where the current directory is present.
+parent = os.path.dirname(current)
+ 
+# adding the parent directory to
+# the sys.path.
+sys.path.append(parent)
+
+from constants.global_constants import GC
 import os
 import json
 
-from app.services.app_service import AppService
+from services.app_service import AppService
 
 
 class InitializeApp:
